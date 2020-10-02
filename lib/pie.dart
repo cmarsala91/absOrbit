@@ -26,7 +26,7 @@ class PieChart {
       (i) => Pie(
         startX + i * pieDistance,
         pieWidth,
-        random.nextDouble() * 6.283,
+        random.nextDouble() * 6.3,
         color,
       ),
     );
