@@ -9,6 +9,9 @@ import 'MyOrb.dart';
 
 void main() {
   runApp(MaterialApp(
+    theme: ThemeData(          // Add the 3 lines from here...
+      primaryColor: Colors.orange,
+    ),
     home: MainPage(),
   ));
 }
@@ -96,20 +99,3 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   }
 }
 
-class MainPage extends StatefulWidget {
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  final wordPair = WordPair.random();
-
-  @override
-  Widget build(BuildContext context) {
-
-    return Scaffold (
-      appBar: AppBar(),
-      body: RandomWords(),
-    );
-  }
-}
