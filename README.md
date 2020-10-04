@@ -8,6 +8,7 @@ Install flutter sdk
 
 Run `flutter get`
 
+Run `flutter doctor` to check for devices
 
 
 
