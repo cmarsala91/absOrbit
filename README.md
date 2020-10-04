@@ -6,7 +6,9 @@ Attempt at making a simple game to absorb circles on screen.
 
 Install flutter sdk
 
-Run :flutter get:s
+Run `flutter get`
+
+Run `flutter doctor` to check for devices
 
 
 
