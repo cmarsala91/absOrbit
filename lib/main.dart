@@ -1,4 +1,7 @@
 
+import 'package:absorbit/ParentStateExample.dart';
+import 'package:absorbit/RandomWords.dart';
+import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 
@@ -6,11 +9,12 @@ import 'MyOrb.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: MyHomePage(),
+    home: MainPage(),
   ));
 }
 
 class MyHomePage extends StatefulWidget {
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -30,8 +34,11 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           children: <Widget>[
             Draggable(
               data: 5,
-              child: MyOrb(),
-              childWhenDragging: Container(),
+              child: ParentWidget(),
+              childWhenDragging: Container(
+                height: 100.0,
+                width: 100.0,
+              ),
               feedback: MyOrb(),
             ),
             Row(
@@ -85,6 +92,24 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           ],
         ),
       ),
+    );
+  }
+}
+
+class MainPage extends StatefulWidget {
+  @override
+  _MainPageState createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  final wordPair = WordPair.random();
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold (
+      appBar: AppBar(),
+      body: RandomWords(),
     );
   }
 }
