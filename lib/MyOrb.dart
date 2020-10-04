@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MyOrb extends StatefulWidget {
-
-
   @override
   _MyOrbState createState() => _MyOrbState();
 }
